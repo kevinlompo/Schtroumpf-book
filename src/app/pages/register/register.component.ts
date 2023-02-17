@@ -46,7 +46,7 @@ export class RegisterComponent implements OnInit{
     alert("Signup SuccessFull");
     console.log(this.accountSuccessfulEmitter);
     this.registerForm.reset();
-    this.router.navigate(['/login']);
+    this.router.navigate(['/chargement']);
 
   }
 }

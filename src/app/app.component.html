@@ -9,9 +9,15 @@
       <app-register></app-register>
     </ng-template>
     <ng-template #block3>
-      <ng-container *ngIf="router.url === '/home'; then home"></ng-container>
+      <ng-container *ngIf="router.url === '/home'; then home else block4"></ng-container>
       <ng-template #home>
         <app-home></app-home>
+      </ng-template>
+      <ng-template #block4>
+        <ng-container *ngIf="router.url === '/chargement'; then chargement"></ng-container>
+        <ng-template #chargement>
+          <app-chargement></app-chargement>
+        </ng-template>
       </ng-template>
     </ng-template>
   </ng-template>

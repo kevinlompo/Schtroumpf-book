@@ -20,12 +20,14 @@ import { RouterModule } from "@angular/router";
 import {SchtroumpfComponent} from "./schtroumpfs/schtroumpf/schtroumpf.component";
 import {SchtroumpfFormComponent} from "./schtroumpfs/schtroumpf-form/schtroumpf-form.component";
 import {SchtroumpfListComponent} from "./schtroumpfs/schtroumpf-list/schtroumpf-list.component";
+import {ChargementComponent} from "./pages/chargement/chargement.component";
 
 const routes: Routes = [
   {path: '', redirectTo:'login', pathMatch:'full'},
   {path: 'home', component: HomeComponent},
   {path: 'login', component: LoginComponent},
   {path: 'register', component: RegisterComponent},
+  {path: 'chargement', component: ChargementComponent},
 ];
 
 @NgModule({

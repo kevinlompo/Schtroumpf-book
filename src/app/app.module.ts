@@ -23,6 +23,7 @@ import { SchtroumpfListComponent } from './schtroumpfs/schtroumpf-list/schtroump
 import { SchtroumpfFormComponent } from './schtroumpfs/schtroumpf-form/schtroumpf-form.component';
 import { SchtroumpfService } from "../services/schtroumpf.service";
 import { HttpClientModule } from '@angular/common/http';
+import { ChargementComponent } from './pages/chargement/chargement.component';
 
 @NgModule({
   declarations: [
@@ -35,6 +36,7 @@ import { HttpClientModule } from '@angular/common/http';
     SchtroumpfComponent,
     SchtroumpfListComponent,
     SchtroumpfFormComponent,
+    ChargementComponent,
   ],
   imports: [
     BrowserModule,

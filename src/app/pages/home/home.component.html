@@ -1,6 +1,13 @@
-<div class="main-content">
+
+
+<div class="spinner-grow  center" role="status" *ngIf="loader">
+  <span class="sr-only">Loading...</span>
+</div>
+
+<div class="main-content" *ngIf="!loader">
+  <div class="loader"></div>
   <app-schtroumpf-form></app-schtroumpf-form>
   <app-schtroumpf-list></app-schtroumpf-list>
 </div>
-
+<script src="app.js"></script>
 

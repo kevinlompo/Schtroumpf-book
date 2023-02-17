@@ -7,10 +7,15 @@ import {Router} from "@angular/router";
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit{
+  loader: boolean =  true;
 
   constructor(public router:Router) {
   }
   ngOnInit(): void {
+    setTimeout(()=>{
+      this.loader = false;
+    },  3000);
   }
+
 
 }

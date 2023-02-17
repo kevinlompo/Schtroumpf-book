@@ -1,0 +1,26 @@
+<div class="card">
+  <h2>Create a new Schtroumpf</h2>
+  <form class="quiz-form" [formGroup]="schtroumpfForm">
+    <label for="pseudo">
+      Pseudo <br>
+      <input class="input-custom" type="text" id="pseudo" [formControlName]="'pseudo'">
+    </label> <br>
+    <label for="password">
+      Pasword <br>
+      <input class="input-custom" type="text" id="password" [formControlName]="'password'">
+    </label> <br>
+    <label for="role">
+      Rôle <br>
+      <select name="role" id="role" [formControlName]="'role'">
+        <option value="">--Sélectionner un role</option>
+        <option *ngFor="let currentsRole of listRole" [value]="currentsRole">
+          {{currentsRole}}
+        </option>
+      </select>
+    </label>
+    <br>
+    <button type="submit" class="button-card-create" (click)="addQuiz()">Create</button>
+  </form>
+</div>
+<!-- Uncomment below to see your form structure and how it changes-->
+<br><br>{{schtroumpfForm.getRawValue() | json}}

@@ -1,0 +1,16 @@
+<div class="card">
+  <h2>
+  PSEUDO: {{schtroumpf.pseudo}}
+  </h2>
+  <span> Rhôle: {{schtroumpf.role}} </span><br>
+
+  <ng-container *ngIf="schtroumpf.creationDate">
+    <span> Date de création: {{schtroumpf.creationDate | date: 'h:m a z'}} </span><br>
+  </ng-container>
+  <div class="button">
+    <ng-container>
+      <button class="button-card-selected" (click)="selectSchtroumpf()">Select</button>
+      <button class="button-card-delete" (click)="delete()">Supprimer</button>
+    </ng-container>
+  </div>
+</div>

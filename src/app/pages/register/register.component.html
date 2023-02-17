@@ -1,0 +1,39 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-6">
+      <div class="card">
+        <div class="text-center">
+          <h1>Sign up</h1>
+          <h6>Register Yourself !!</h6>
+        </div>
+        <form (ngSubmit)="signUp()" [formGroup]="registerForm">
+          <div class="mb-3">
+            <label for="inputPseudo" class="form-label">pseudo</label>
+            <input type="text" class="form-control" id="inputPseudo" aria-describedby="emailHelp" placeholder="Créer un pseudo" [formControlName]="'pseudo'">
+            <div></div>
+          </div>
+          <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label">mot de passe</label>
+            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="***" [formControlName]="'password'">
+          </div>
+          <div class="mb-3 form-check">
+            <label for="role">Sélectionner un rôle &nbsp; </label>
+            <select name="role" id="role" [formControlName]="'role'">
+              <option value="Guerrier">Guerrier</option>
+              <option value="Alchimiste">Alchimiste</option>
+              <option value="Sorcier">Sorcier</option>
+              <option value="Espions">Espions</option>
+              <option value="Enchanteur">Enchanteur</option>
+            </select>
+          </div>
+          <button type="submit" class="btn btn-primary">Submit</button>
+          <div class="login">
+            <p>Vous avez un compte?
+              <a routerLink="../login">Connectez-vous</a>
+            </p>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,5 @@
+<div class="schtroumpf-list">
+    <div class="schtroumpf" *ngFor="let schtroumpf of schtroumpfList">
+      <app-schtroumpf [schtroumpf]="schtroumpf" (schtroumpfSelected)="schtroumpfSelected($event)" (schtroumpfDelete)="deleteSchtroumpf($event)"></app-schtroumpf>
+    </div>
+</div>
